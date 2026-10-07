@@ -54,8 +54,8 @@ pnpm.cmd run publish:dev
 The script checks `gh auth status`, requires a clean working tree, and triggers `docker-image.yml` with `channel=dev`. The workflow publishes:
 
 ```text
-ghcr.io/paimonria/image-2-studio:dev-latest
-ghcr.io/paimonria/image-2-studio:dev-<short-sha>
+ghcr.io/ANRCM0/image-2-studio:dev-latest
+ghcr.io/ANRCM0/image-2-studio:dev-<short-sha>
 ```
 
 To inspect the remote run:
@@ -140,8 +140,8 @@ git push origin v1.2.23
 The tag workflow publishes:
 
 ```text
-ghcr.io/paimonria/image-2-studio:v1.2.23
-ghcr.io/paimonria/image-2-studio:latest
+ghcr.io/ANRCM0/image-2-studio:v1.2.23
+ghcr.io/ANRCM0/image-2-studio:latest
 ```
 
 ## Production Security Checklist

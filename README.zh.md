@@ -74,10 +74,10 @@ $env:NEXT_STANDALONE="true"; pnpm.cmd run build
 - `latest` 由推送 `v*` tag 的正式发布流程自动更新。
 
 ```text
-ghcr.io/paimonria/image-2-studio:dev-latest
-ghcr.io/paimonria/image-2-studio:dev-<short-sha>
-ghcr.io/paimonria/image-2-studio:<version-tag>
-ghcr.io/paimonria/image-2-studio:latest
+ghcr.io/ANRCM0/image-2-studio:dev-latest
+ghcr.io/ANRCM0/image-2-studio:dev-<short-sha>
+ghcr.io/ANRCM0/image-2-studio:<version-tag>
+ghcr.io/ANRCM0/image-2-studio:latest
 ```
 
 ### 1. 获取部署文件
@@ -85,7 +85,7 @@ ghcr.io/paimonria/image-2-studio:latest
 克隆仓库只是为了拿到 Compose 文件和 `.env.example`，服务器不会构建源码。
 
 ```bash
-git clone https://github.com/paimonria/Image-2-Studio.git
+git clone https://github.com/ANRCM0/Image-2-Studio.git
 cd Image-2-Studio
 ```
 
@@ -99,7 +99,7 @@ nano .env
 使用默认内置 PostgreSQL 和 Redis 栈时至少修改：
 
 ```env
-IMAGE_NAME=ghcr.io/paimonria/image-2-studio
+IMAGE_NAME=ghcr.io/ANRCM0/image-2-studio
 IMAGE_TAG=latest
 APP_PORT=3000
 POSTGRES_PASSWORD=replace-with-a-strong-postgres-password
@@ -192,7 +192,7 @@ nano .env
 推荐起步配置：
 
 ```env
-IMAGE_NAME=ghcr.io/paimonria/image-2-studio
+IMAGE_NAME=ghcr.io/ANRCM0/image-2-studio
 IMAGE_TAG=latest
 APP_PORT=3000
 
@@ -452,8 +452,8 @@ pnpm.cmd run publish:dev
 这个命令会检查 `gh auth status`、要求工作区干净，并触发 `docker-image.yml` 的 `channel=dev`。远端 workflow 会推送：
 
 ```text
-ghcr.io/paimonria/image-2-studio:dev-latest
-ghcr.io/paimonria/image-2-studio:dev-<short-sha>
+ghcr.io/ANRCM0/image-2-studio:dev-latest
+ghcr.io/ANRCM0/image-2-studio:dev-<short-sha>
 ```
 
 它不会更新生产 `latest`。
@@ -481,8 +481,8 @@ git push origin v1.2.23
 tag push workflow 会推送：
 
 ```text
-ghcr.io/paimonria/image-2-studio:v1.2.23
-ghcr.io/paimonria/image-2-studio:latest
+ghcr.io/ANRCM0/image-2-studio:v1.2.23
+ghcr.io/ANRCM0/image-2-studio:latest
 ```
 
 Actions 成功后，再到服务器更新。

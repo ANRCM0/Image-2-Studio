@@ -10,7 +10,7 @@ describe("deployment configuration guardrails", () => {
   it("keeps production compose pull-based for web and worker containers", () => {
     const compose = read("docker-compose.yml");
 
-    assert.match(compose, /image:\s+\$\{IMAGE_NAME:-ghcr\.io\/paimonria\/image-2-studio\}:\$\{IMAGE_TAG:-latest\}/);
+    assert.match(compose, /image:\s+\$\{IMAGE_NAME:-ghcr\.io\/ANRCM0\/image-2-studio\}:\$\{IMAGE_TAG:-latest\}/);
     assert.equal((compose.match(/pull_policy:\s+always/g) ?? []).length, 2);
     assert.match(compose, /IMAGE_PROCESS_ROLE:\s+web/);
     assert.match(compose, /IMAGE_PROCESS_ROLE:\s+worker/);

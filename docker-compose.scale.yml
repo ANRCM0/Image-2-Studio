@@ -1,6 +1,6 @@
 services:
   image-2-migrate:
-    image: ${IMAGE_NAME:-ghcr.io/paimonria/image-2-studio}:${IMAGE_TAG:-latest}
+    image: ${IMAGE_NAME:-ghcr.io/ANRCM0/image-2-studio}:${IMAGE_TAG:-latest}
     pull_policy: always
     restart: "no"
     init: true
